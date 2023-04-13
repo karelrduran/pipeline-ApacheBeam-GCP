@@ -7,9 +7,11 @@ There are two tables in the London dataset in BigQuery (https://bigquery.cloud.g
 To inspect these tables, you will need a GCP project (see instructions).
 
 The goal in this coding challenge is to:
-	* Step 1: Calculate the amount of rides traveled for all possible combination of start station and end station in the dataset.
+	
+	Step 1: Calculate the amount of rides traveled for all possible combination of start station and end station in the dataset.
 	(for example, there are 3 rides from station_id 1 to station_id 2 and 10 rides from station_id 2 to station_id 1)
-	* Step 2: Calculate the total distance covered for all the rides for possible combinations of start station and end station assuming the trip distance between the two stations can be simplified by straight line between the two station's locations 
+	
+	Step 2: Calculate the total distance covered for all the rides for possible combinations of start station and end station assuming the trip distance between the two stations can be simplified by straight line between the two station's locations 
 	(following the example above, if the distance between station_id 1 and station_id 2 is 2 km then the distance covered from station_id 1 to station_id 2 is 6 km and 20 km vice versa)
 	
 The idea is thar you build a DataFlow (https://cloud.google.com/dataflow/docs/) pipeline to solve these questions and don't solve this directly with queries in BigQuery. Therefore the query should only extract the data and not apply any transformation on the data.
